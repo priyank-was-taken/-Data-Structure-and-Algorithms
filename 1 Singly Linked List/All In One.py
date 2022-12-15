@@ -20,7 +20,7 @@ class singlylinkedlist:
             yield node
             node = node.next
 
-    # --------------------insertion in SSL---------------------
+    # ----------------------Append in SSL----------------------
 
     def append_item(self, data):
         # Append items on the list
@@ -34,6 +34,8 @@ class singlylinkedlist:
             self.tail.next = node
             self.tail = node
         # self.count += 1
+
+    # --------------------insertion in SSL---------------------
 
     def insertSSL(self, value, location):
         newNode = Node(value)
