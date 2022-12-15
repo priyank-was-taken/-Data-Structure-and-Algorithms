@@ -58,6 +58,14 @@ class SinglyLinkedList:
                 nextNode = currentNode.next
                 currentNode.next = nextNode.next
 
+    # ----------------------------delete entire list--------------------------
+    def delete_entire(self):
+        if self.head is None:
+            print("the singly linked list does not exist")
+        else:
+            self.head = None
+            self.tail = None
+
 
 SLinkedList = SinglyLinkedList()
 SLinkedList.appendSLL('quinn')
