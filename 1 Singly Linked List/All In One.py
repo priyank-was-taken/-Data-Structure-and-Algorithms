@@ -8,7 +8,7 @@ class Node:
         self.next = None
 
 
-class SLinkedList:
+class singlylinkedlist:
     def __init__(self):
         self.head = None
         self.tail = None
@@ -138,21 +138,21 @@ class SLinkedList:
         return current_val.value
 
 
-singlylinkedlist = SLinkedList()
-singlylinkedlist.append_item('aman')
-singlylinkedlist.append_item('deep')
-singlylinkedlist.append_item('breydan')
-singlylinkedlist.append_item('logan')
-singlylinkedlist.append_item('tincy')
+SLinkedList = singlylinkedlist()
+SLinkedList.append_item('aman')
+SLinkedList.append_item('deep')
+SLinkedList.append_item('breydan')
+SLinkedList.append_item('logan')
+SLinkedList.append_item('tincy')
 # singlylinkedlist.insertSSL(33, 3)
 # singlylinkedlist.insertSSL(33, 1)
 # singlylinkedlist.insertSSL(33, 3)
 
 # # print("[0,1,2,3,4]")
-print([node.value for node in singlylinkedlist])
+print([node.value for node in SLinkedList])
 # # singlylinkedlist.treverse()
 # # singlylinkedlist.search(33)
 # singlylinkedlist.deletion(-1)
 # print([node.value for node in singlylinkedlist])
 # singlylinkedlist.delete_entire()
-print(singlylinkedlist[3])
+print(SLinkedList[3])

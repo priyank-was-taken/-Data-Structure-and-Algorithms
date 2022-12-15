@@ -22,7 +22,7 @@
 # #         node.next = node
 # #         self.head = node
 # #         self.tail = node
-# #         return "Circular Singly Linked List is created"
+# #         return "Circular 1 Singly Linked List is created"
 # #
 # #     def insertCSLL(self, value, location):
 # #         newNode = Node(value)

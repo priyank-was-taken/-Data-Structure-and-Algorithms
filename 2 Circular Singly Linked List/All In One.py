@@ -22,7 +22,7 @@ class CircularSinglyLinkedList:
                 break
             node = node.next
 
-    # --------------------------Creation of Circular Singly Linked List------------------------------------
+    # --------------------------Creation of Circular 1 Singly Linked List------------------------------------
 
     def createCSLL(self, value):
         node = Node(value)
@@ -31,7 +31,7 @@ class CircularSinglyLinkedList:
         self.tail = node
         return "Circular Linked List Download is created"
 
-    # ------------------------------------Insertion in Circular Singly Linked List--------------------------------------
+    # ------------------------------------Insertion in Circular 1 Singly Linked List--------------------------------------
 
     def insertCSLL(self, value, location):
         newNode = Node(value)
@@ -73,7 +73,7 @@ class CircularSinglyLinkedList:
                     self.tail = newNode
                     self.tail.next = self.head
 
-    # -------------------------------------traversing in Circular Singly Linked List------------------------------------
+    # -------------------------------------traversing in Circular 1 Singly Linked List------------------------------------
 
     def traverseCSLL(self):
         if self.head is None:
@@ -87,7 +87,7 @@ class CircularSinglyLinkedList:
                     break
                 currentNode = currentNode.next
 
-    # ------------------------------------Searching in Circular Singly Linked List--------------------------------------
+    # ------------------------------------Searching in Circular 1 Singly Linked List--------------------------------------
 
     def searchCSLL(self, item):
         if self.head is None:
