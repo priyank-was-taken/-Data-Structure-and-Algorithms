@@ -44,7 +44,7 @@ class SinglyLinkedList:
             else:
                 currentNode = self.head
                 index = 0
-                while index < location-2:
+                while index < location-1:
                     currentNode = currentNode.next
                     index += 1
                 nextNode = currentNode.next
