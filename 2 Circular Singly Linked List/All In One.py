@@ -29,9 +29,9 @@ class CircularSinglyLinkedList:
         node.next = node
         self.head = node
         self.tail = node
-        return "Circular Linked List Download is created"
+        return "Circular Linked List is created"
 
-    # ------------------------------------Insertion in Circular 1 Singly Linked List--------------------------------------
+    # ------------------------------------Insertion in Circular 1 Singly Linked List------------------------------------
 
     def insertCSLL(self, value, location):
         newNode = Node(value)
