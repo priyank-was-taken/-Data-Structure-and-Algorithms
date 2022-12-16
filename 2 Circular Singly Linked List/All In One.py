@@ -69,11 +69,8 @@ class CircularSinglyLinkedList:
                 nextNode = currentNode.next
                 currentNode.next = newNode
                 newNode.next = nextNode
-                if currentNode == self.tail:
-                    self.tail = newNode
-                    self.tail.next = self.head
 
-    # -------------------------------------traversing in Circular 1 Singly Linked List------------------------------------
+    # -------------------------------------traversing in Circular 1 Singly Linked List----------------------------------
 
     def traverseCSLL(self):
         if self.head is None:
