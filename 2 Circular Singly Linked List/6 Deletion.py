@@ -63,6 +63,8 @@ class CircularSinglyLinkedList:
                     index += 1
                 nextNode = currentNode.next
                 currentNode.next = nextNode.next
+
+                # to update the tail node
                 if currentNode == self.tail:
                     self.tail = currentNode
                     self.tail.next = self.head

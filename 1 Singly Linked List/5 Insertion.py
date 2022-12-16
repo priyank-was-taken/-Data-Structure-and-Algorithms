@@ -50,8 +50,6 @@ class SinglyLinkedList:
                 nextNode = currentNode.next
                 currentNode.next = newNode
                 newNode.next = nextNode
-                # if currentNode == self.tail:
-                #     self.tail = currentNode
 
 
 SLinkedList = SinglyLinkedList()
