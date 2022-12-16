@@ -65,6 +65,16 @@ class DoublyLinkedList:
                     newNode.next.prev = newNode  # or -- currentNode.next.prev = newNode
                     currentNode.next = newNode
 
+    # ------------------------------------Print Nodes of Linked List-------------------------------------
+
+    def printList(self):
+        currentNode = self.head
+        while currentNode:
+            print(currentNode.value)
+            if currentNode.next == self.head:
+                break
+            currentNode = currentNode.next
+
 
 DLinkedList = DoublyLinkedList()
 # DLinkedList.createDLL('hello')
@@ -74,3 +84,4 @@ DLinkedList.insertionDLL('are', 2)
 DLinkedList.insertionDLL('you?', 3)
 # DLinkedList.insertionDLL(3)
 print([node.value for node in DLinkedList])
+# DLinkedList.printList()

@@ -131,13 +131,21 @@ class singlylinkedlist:
             self.head = None
             self.tail = None
 
-    def __getitem__(self, index):
-        # if index > self.count - 1:
-        #     return "Index out of range"
-        current_val = self.head
-        for n in range(index):
-            current_val = current_val.next
-        return current_val.value
+    def printList(self):
+        currentNode = self.head
+        while currentNode:
+            print(currentNode.value)
+            # if currentNode.next == self.head:
+            #     break
+            currentNode = currentNode.next
+
+    # def __getitem__(self, index):
+    #     # if index > self.count - 1:
+    #     #     return "Index out of range"
+    #     current_val = self.head
+    #     for n in range(index):
+    #         current_val = current_val.next
+    #     return current_val.value
 
 
 SLinkedList = singlylinkedlist()
@@ -154,8 +162,10 @@ SLinkedList.append_item('tincy')
 print([node.value for node in SLinkedList])
 # # SLinkedList.treverse()
 # # SLinkedList.search(33)
-SLinkedList.deletion(0)
+# SLinkedList.deletion(0)
 # print([node.value for node in singlylinkedlist])
 # SLinkedList.delete_entire()
 # print(SLinkedList[3])
 print([node.value for node in SLinkedList])
+
+# SLinkedList.printList()
