@@ -33,13 +33,13 @@ class DoublyLinkedList:
             self.tail = newNode
 
     def reverseTraverse(self):
-        currentNode = self.tail
-        while currentNode:
-            print(currentNode.value)
-            if currentNode == self.head:
-                break
-            currentNode = currentNode.prev
-
+        if self.head is None:
+            print("Linked List doesn't exist")
+        else:
+            currentNode = self.tail
+            while currentNode:
+                print(currentNode.value)
+                currentNode = currentNode.prev
 
 
 DLinkedList = DoublyLinkedList()

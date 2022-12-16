@@ -34,10 +34,13 @@ class DoublyLinkedList:
             self.tail = newNode
 
     def traverseDLL(self):
-        currentNode = self.head
-        while currentNode:
-            print(currentNode.value)
-            currentNode = currentNode.next
+        if self.head is None:
+            print("Linked List doesn't exist")
+        else:
+            currentNode = self.head
+            while currentNode:
+                print(currentNode.value)
+                currentNode = currentNode.next
 
 
 DLinkedList = DoublyLinkedList()
