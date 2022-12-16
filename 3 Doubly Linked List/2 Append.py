@@ -19,7 +19,7 @@ class DoublyLinkedList:
 
     # --------------------------Append Doubly Linked List----------------------------
 
-    def append(self, value):
+    def appendDLL(self, value):
         newNode = Node(value)
         if self.head is None:
             newNode.next = None
@@ -35,9 +35,8 @@ class DoublyLinkedList:
 
 
 DLinkedList = DoublyLinkedList()
-DLinkedList.append('hello')
-DLinkedList.append('are')
-DLinkedList.append('are')
-DLinkedList.append('you?')
-
+DLinkedList.appendDLL('hello')
+DLinkedList.appendDLL('how')
+DLinkedList.appendDLL('are')
+DLinkedList.appendDLL('you?')
 print([node.value for node in DLinkedList])
