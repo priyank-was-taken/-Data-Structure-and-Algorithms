@@ -33,14 +33,17 @@ class SinglyLinkedList:
         index = 0
         while currentNode:
             if currentNode.value == item:
-                return str(item)+" found at index "+str(index)
+                print(f'item "{item}" found at index [{index}]')
+                break
+            if index == self.count - 1:
+                print(f'item "{item}" does not exist')
+                break
             currentNode = currentNode.next
-            index += index
-        return str(item)+" does not exist"
+            index += 1
 
 
 SLinkedList = SinglyLinkedList()
 SLinkedList.appendSLL('quinn')
 SLinkedList.appendSLL('harley')
 print([node.value for node in SLinkedList])
-print(SLinkedList.searchSLL('quin'))
+SLinkedList.searchSLL('harley')

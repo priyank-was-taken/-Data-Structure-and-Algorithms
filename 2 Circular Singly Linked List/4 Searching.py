@@ -41,9 +41,11 @@ class CircularSinglyLinkedList:
             while currentNode:
                 if currentNode.value == item:
                     print(f'"{item}" found at index [{index}]')
+                    break
                 currentNode = currentNode.next
-                index +=1
+                index += 1
                 if currentNode == self.head:
+                    print("item does not found")
                     break
 
 
