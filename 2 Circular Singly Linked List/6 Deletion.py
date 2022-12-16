@@ -8,6 +8,7 @@ class CircularSinglyLinkedList:
     def __init__(self):
         self.head = None
         self.tail = None
+        self.count = 0
 
     def __iter__(self):
         node = self.head
@@ -27,6 +28,7 @@ class CircularSinglyLinkedList:
             newNode.next = self.tail.next
             self.tail.next = newNode
             self.tail = newNode
+        self.count += 1
 
     def deleteCSLL(self, location):
         if self.head is None:
@@ -65,9 +67,8 @@ class CircularSinglyLinkedList:
                 currentNode.next = nextNode.next
 
                 # to update the tail node
-                if currentNode == self.tail:
+                if currentNode.next == self.head:
                     self.tail = currentNode
-                    self.tail.next = self.head
 
 
 CSLinkedList = CircularSinglyLinkedList()
@@ -76,5 +77,5 @@ CSLinkedList.appendCSLL('how')
 CSLinkedList.appendCSLL('are')
 CSLinkedList.appendCSLL('you?')
 print([node.value for node in CSLinkedList])
-CSLinkedList.deleteCSLL(2)
+CSLinkedList.deleteCSLL(3)
 print([node.value for node in CSLinkedList])

@@ -25,6 +25,7 @@ class SinglyLinkedList:
         else:
             self.tail.next = newNode
             self.tail = newNode
+        self.count += 1
 
     def deletionSSL(self, location):
         if self.head is None:
@@ -59,7 +60,7 @@ class SinglyLinkedList:
                 currentNode.next = nextNode.next
 
                 # to update the tail node
-                if currentNode == self.tail:
+                if currentNode.next is None:
                     self.tail = currentNode
 
     # ----------------------------delete entire list--------------------------

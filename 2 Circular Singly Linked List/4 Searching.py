@@ -45,7 +45,7 @@ class CircularSinglyLinkedList:
                 currentNode = currentNode.next
                 index += 1
                 if currentNode == self.head:
-                    print("item does not found")
+                    print(f'item [{item}] does not found')
                     break
 
 
@@ -55,4 +55,4 @@ CSLinkedList.appendCSLL('how')
 CSLinkedList.appendCSLL('are')
 CSLinkedList.appendCSLL('you?')
 print([node.value for node in CSLinkedList])
-CSLinkedList.searchCSLL('are')
+CSLinkedList.searchCSLL('ar')

@@ -10,6 +10,7 @@ class DoublyLinkedList:
     def __init__(self):
         self.head = None
         self.tail = None
+        self.count = 0
 
     def __iter__(self):
         node = self.head
@@ -17,7 +18,7 @@ class DoublyLinkedList:
             yield node
             node = node.next
 
-    # --------------------------Creation of Doubly Linked List----------------------------
+    # -------------------------------Creation of Doubly Linked List-------------------------------
 
     def createDLL(self, value):
         node = Node(value)
@@ -25,6 +26,60 @@ class DoublyLinkedList:
         node.prev = None
         self.head = node
         self.tail = node
+
+    # ---------------------------------Append Doubly Linked List---------------------------------
+
+    def appendDLL(self, value):
+        newNode = Node(value)
+        if self.head is None:
+            newNode.next = None
+            newNode.prev = None
+            self.head = newNode
+            self.tail = newNode
+
+        else:
+            newNode.prev = self.tail
+            newNode.next = None
+            self.tail.next = newNode
+            self.tail = newNode
+        self.count += 1
+
+    # -----------------------------Traversing in Doubly Linked List------------------------------
+
+    def traverseDLL(self):
+        if self.head is None:
+            print("Linked List doesn't exist")
+        else:
+            currentNode = self.head
+            while currentNode:
+                print(currentNode.value)
+                currentNode = currentNode.next
+
+    # -----------------------------Reverse Traversing in Doubly Linked List------------------------------
+
+    def reverseTraverseDLL(self):
+        if self.head is None:
+            print("Linked List doesn't exist")
+        else:
+            currentNode = self.tail
+            while currentNode:
+                print(currentNode.value)
+                currentNode = currentNode.prev
+
+    # -----------------------------Searching in Doubly Linked List------------------------------
+
+    def searchSLL(self, item):
+        currentNode = self.head
+        index = 0
+        while currentNode:
+            if currentNode.value == item:
+                print(f'item "{item}" found at index [{index}]')
+                break
+            if index == self.count - 1:
+                print(f'item "{item}" does not exist')
+                break
+            currentNode = currentNode.next
+            index += 1
 
     # ---------------------------Insertion in Doubly Linked List---------------------------
 
@@ -65,6 +120,40 @@ class DoublyLinkedList:
                     newNode.next.prev = newNode  # or -- currentNode.next.prev = newNode
                     currentNode.next = newNode
 
+    # -----------------------------Deletion in Doubly Linked List------------------------------
+
+    def deleteDLL(self, location):
+        if self.head is None:
+            print("Linked List doesn't exist")
+
+        else:
+            if location == 0:
+                if self.head == self.tail:
+                    self.head = None
+                    self.tail = None
+                else:
+                    self.head = self.head.next
+                    self.head.prev = None
+            elif location == -1:
+                if self.head == self.tail:
+                    self.head = None
+                    self.tail = None
+                else:
+                    self.tail = self.tail.prev
+                    self.tail.next = None
+            else:
+                currentNode = self.head
+                index = 0
+                while index < location - 1:
+                    currentNode = currentNode.next
+                    index += 1
+                nextNode = currentNode.next
+                currentNode.next = nextNode.next
+
+                # to update the tail Node
+                if currentNode.next is None:
+                    self.tail = currentNode
+
     # ------------------------------------Print Nodes of Linked List-------------------------------------
 
     def printList(self):
@@ -78,10 +167,13 @@ class DoublyLinkedList:
 
 DLinkedList = DoublyLinkedList()
 # DLinkedList.createDLL('hello')
-DLinkedList.insertionDLL('hello', 0)
-DLinkedList.insertionDLL('how', 1)
-DLinkedList.insertionDLL('are', 2)
-DLinkedList.insertionDLL('you?', 3)
+DLinkedList.appendDLL('hello')
+DLinkedList.appendDLL('how')
+DLinkedList.appendDLL('are')
+DLinkedList.appendDLL('you?')
 # DLinkedList.insertionDLL(3)
+DLinkedList.deleteDLL(3)
 print([node.value for node in DLinkedList])
+DLinkedList.traverseDLL()
+DLinkedList.reverseTraverseDLL()
 # DLinkedList.printList()

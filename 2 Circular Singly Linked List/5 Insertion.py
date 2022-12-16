@@ -8,6 +8,7 @@ class CircularSinglyLinkedList:
     def __init__(self):
         self.head = None
         self.tail = None
+        self.count = 0
 
     def __iter__(self):
         node = self.head
@@ -27,6 +28,7 @@ class CircularSinglyLinkedList:
             newNode.next = self.tail.next
             self.tail.next = newNode
             self.tail = newNode
+        self.count += 1
 
     def insertCSLL(self, value, location):
         newNode = Node(value)

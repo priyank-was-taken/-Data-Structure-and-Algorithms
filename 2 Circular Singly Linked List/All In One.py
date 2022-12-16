@@ -13,6 +13,7 @@ class CircularSinglyLinkedList:
     def __init__(self):
         self.head = None
         self.tail = None
+        self.count = 0
 
     def __iter__(self):
         node = self.head
@@ -29,6 +30,7 @@ class CircularSinglyLinkedList:
         node.next = node
         self.head = node
         self.tail = node
+        self.count += 1
         return "Circular Linked List is created"
 
     # ------------------------------------Insertion in Circular 1 Singly Linked List------------------------------------
@@ -42,7 +44,7 @@ class CircularSinglyLinkedList:
             self.tail = newNode
             return
 
-        # ----another method for insertion at last-----
+        # ------------------------another method for insertion at last---------------------------
         # currentNode = self.head
         # while currentNode.next is not self.head:
         #     currentNode = currentNode.next
@@ -139,6 +141,10 @@ class CircularSinglyLinkedList:
                     index += 1
                 nextNode = currentNode.next
                 currentNode.next = nextNode.next
+
+                # to update the tail node
+                if currentNode.next == self.head:
+                    self.tail = currentNode
 
     # ------------------------------------print method------------------------------------------------------------------
 

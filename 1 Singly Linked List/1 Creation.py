@@ -9,6 +9,7 @@ class singlylinkedlist:
     def __init__(self):
         self.head = None
         self.tail = None
+        self.count = 0
 
     def __iter__(self):
         node = self.head
@@ -20,6 +21,7 @@ class singlylinkedlist:
         node = Node(value)
         self.head = node
         self.tail = node
+        self.count += 1
 
 
 SLinkedList = singlylinkedlist()

@@ -24,6 +24,7 @@ class SinglyLinkedList:
         else:
             self.tail.next = newNode
             self.tail = newNode
+        self.count += 1
 
     def insertSLL(self, value, location):
         newNode = Node(value)

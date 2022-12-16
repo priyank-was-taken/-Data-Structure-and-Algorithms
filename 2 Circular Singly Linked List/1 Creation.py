@@ -24,6 +24,8 @@ class CircularSinglyLinkedList:
         node.next = node
         self.head = node
         self.tail = node
+        self.count += 1
+        return "Circular Linked List is created"
 
 
 CSLinkedList = CircularSinglyLinkedList()

@@ -10,6 +10,7 @@ class DoublyLinkedList:
     def __init__(self):
         self.head = None
         self.tail = None
+        self.count = 0
 
     def __iter__(self):
         node = self.head
@@ -32,7 +33,7 @@ class DoublyLinkedList:
             newNode.next = None
             self.tail.next = newNode
             self.tail = newNode
-
+        self.count += 1
 
 DLinkedList = DoublyLinkedList()
 DLinkedList.appendDLL('hello')

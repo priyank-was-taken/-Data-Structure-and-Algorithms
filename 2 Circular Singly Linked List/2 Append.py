@@ -31,6 +31,7 @@ class CircularSinglyLinkedList:
             newNode.next = self.tail.next
             self.tail.next = newNode
             self.tail = newNode
+        self.count += 1
 
 
 CSLinkedList = CircularSinglyLinkedList()

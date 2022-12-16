@@ -12,7 +12,7 @@ class singlylinkedlist:
     def __init__(self):
         self.head = None
         self.tail = None
-        # self.count = 0
+        self.count = 0
 
     def __iter__(self):
         node = self.head
@@ -33,7 +33,7 @@ class singlylinkedlist:
         else:
             self.tail.next = node
             self.tail = node
-        # self.count += 1
+        self.count += 1
 
     # --------------------insertion in SSL---------------------
 
@@ -77,17 +77,18 @@ class singlylinkedlist:
 
     # -------------------------------------Search in SSL----------------------------------
 
-    def search(self, item):
-        if self.head is None:
-            print("the singly linked list does not exist")
-        else:
-            node = self.head
-            index = 0
-            while node is not None:
-                if node.value == item:
-                    print("item found at index", index)
-                index += 1
-                node = node.next
+    def searchSLL(self, item):
+        currentNode = self.head
+        index = 0
+        while currentNode:
+            if currentNode.value == item:
+                print(f'item "{item}" found at index [{index}]')
+                break
+            if index == self.count - 1:
+                print(f'item "{item}" does not exist')
+                break
+            currentNode = currentNode.next
+            index += 1
 
     # -------------------------------------deletion in SSL--------------------------------
 
@@ -121,6 +122,10 @@ class singlylinkedlist:
                     index += 1
                 nextNode = tempNode.next
                 tempNode.next = nextNode.next
+
+                # to update the tail node
+                if tempNode.next is None:
+                    self.tail = tempNode
 
     # ---------------------------------------------delete entire SSL---------------------------------------------------
 
@@ -161,7 +166,7 @@ SLinkedList.append_item('tincy')
 # # print("[0,1,2,3,4]")
 print([node.value for node in SLinkedList])
 # # SLinkedList.treverse()
-# # SLinkedList.search(33)
+SLinkedList.searchSLL("tincy")
 # SLinkedList.deletion(0)
 # print([node.value for node in singlylinkedlist])
 # SLinkedList.delete_entire()
