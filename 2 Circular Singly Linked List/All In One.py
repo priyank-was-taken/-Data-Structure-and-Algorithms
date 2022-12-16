@@ -87,22 +87,22 @@ class CircularSinglyLinkedList:
                     break
                 currentNode = currentNode.next
 
-    # ------------------------------------Searching in Circular 1 Singly Linked List--------------------------------------
+    # ------------------------------------Searching in Circular 1 Singly Linked List------------------------------------
 
     def searchCSLL(self, item):
         if self.head is None:
-            return "the linkedlist doesn't exist"
+            print("Linked List doesn't exist")
+
         else:
             currentNode = self.head
             index = 0
-            while True:
+            while currentNode:
                 if currentNode.value == item:
-                    print("the item present at index", index)
-                if currentNode.next is self.head:
-                    print("the item", "(", item, ")", "does not exist")
-                    break
+                    print(f'"{item}" found at index [{index}]')
                 currentNode = currentNode.next
                 index += 1
+                if currentNode == self.head:
+                    break
 
     # ------------------------------------Deletion In Circular Linked List----------------------------------------------
 

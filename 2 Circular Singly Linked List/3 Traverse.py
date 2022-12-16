@@ -1,5 +1,3 @@
-import time
-
 
 class Node:
     def __init__(self, value=None):
@@ -47,5 +45,3 @@ CSLinkedList.appendCSLL('are')
 CSLinkedList.appendCSLL('you?')
 print([node.value for node in CSLinkedList])
 CSLinkedList.traverse()
-
-
