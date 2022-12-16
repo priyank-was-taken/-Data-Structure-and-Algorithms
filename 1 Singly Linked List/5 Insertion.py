@@ -50,12 +50,12 @@ class SinglyLinkedList:
                 nextNode = currentNode.next
                 currentNode.next = newNode
                 newNode.next = nextNode
-                if currentNode == self.tail:
-                    self.tail = currentNode
+                # if currentNode == self.tail:
+                #     self.tail = currentNode
 
 
 SLinkedList = SinglyLinkedList()
 SLinkedList.appendSLL('quinn')
 SLinkedList.appendSLL('harley')
-SLinkedList.insertSLL('harl', -1)
+SLinkedList.insertSLL('harl', 2)
 print([node.value for node in SLinkedList])

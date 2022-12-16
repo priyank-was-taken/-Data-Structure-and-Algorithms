@@ -57,6 +57,8 @@ class SinglyLinkedList:
                     index += 1
                 nextNode = currentNode.next
                 currentNode.next = nextNode.next
+                if currentNode == self.tail:
+                    self.tail = currentNode
 
     # ----------------------------delete entire list--------------------------
     def delete_entire(self):
@@ -72,5 +74,5 @@ SLinkedList.appendSLL('quinn')
 SLinkedList.appendSLL('harley')
 SLinkedList.appendSLL('summer')
 print([node.value for node in SLinkedList])
-SLinkedList.deletionSSL(0)
+SLinkedList.deletionSSL(2)
 print([node.value for node in SLinkedList])

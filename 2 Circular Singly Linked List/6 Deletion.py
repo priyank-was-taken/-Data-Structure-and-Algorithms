@@ -63,6 +63,9 @@ class CircularSinglyLinkedList:
                     index += 1
                 nextNode = currentNode.next
                 currentNode.next = nextNode.next
+                if currentNode == self.tail:
+                    self.tail = currentNode
+                    self.tail.next = self.head
 
 
 CSLinkedList = CircularSinglyLinkedList()
