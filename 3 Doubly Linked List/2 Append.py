@@ -35,6 +35,7 @@ class DoublyLinkedList:
             self.tail = newNode
         self.count += 1
 
+
 DLinkedList = DoublyLinkedList()
 DLinkedList.appendDLL('hello')
 DLinkedList.appendDLL('how')

@@ -1,3 +1,5 @@
+import time
+
 
 class Node:
     def __init__(self, value=None):
@@ -35,6 +37,7 @@ class CircularSinglyLinkedList:
         currentNode = self.head
         while currentNode:
             print(currentNode.value)
+            # time.sleep(1)
             if currentNode.next == self.head:
                 break
             currentNode = currentNode.next

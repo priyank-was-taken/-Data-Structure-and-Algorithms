@@ -22,7 +22,7 @@ class DoublyLinkedList:
 
     # --------------------------Append Doubly Linked List----------------------------
 
-    def appendDLL(self, value):
+    def appendCDLL(self, value):
         newNode = Node(value)
         if self.head is None:
             newNode.next = newNode
@@ -31,9 +31,10 @@ class DoublyLinkedList:
             self.tail = newNode
 
         else:
-            newNode.next = self.tail.next
-            self.tail.next = newNode
             newNode.prev = self.tail
+            newNode.next = self.tail.next
+            self.head.prev = newNode
+            self.tail.next = newNode
             self.tail = newNode
         self.count += 1
 
@@ -55,9 +56,9 @@ class DoublyLinkedList:
 
 
 DLinkedList = DoublyLinkedList()
-DLinkedList.appendDLL('hello')
-DLinkedList.appendDLL('how')
-DLinkedList.appendDLL('are')
-DLinkedList.appendDLL('you?')
+DLinkedList.appendCDLL('hello')
+DLinkedList.appendCDLL('how')
+DLinkedList.appendCDLL('are')
+DLinkedList.appendCDLL('you?')
 print([node.value for node in DLinkedList])
 DLinkedList.searchCDLL('you?')
