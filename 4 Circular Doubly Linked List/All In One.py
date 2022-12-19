@@ -128,7 +128,7 @@ class CircularDoublyLinkedList:
                 newNode.prev = currentNode
                 newNode.next = nextNode
 
-    # ------------------------------deletion in Circular Doubly Linked List------------------------------
+    # ------------------------------deletion in 4 Circular Doubly Linked List------------------------------
 
     def deletionCDLL(self, location):
         if self.head is None:
