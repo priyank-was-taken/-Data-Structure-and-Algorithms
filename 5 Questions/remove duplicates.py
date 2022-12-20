@@ -1,4 +1,3 @@
-
 # Q1 -> Write a code to remove duplicates from an unsorted array.
 
 
@@ -18,6 +17,7 @@ def removeDups(ll):
                 visited.add(currentNode.next.value)
                 currentNode = currentNode.next
         return ll
+
 
 # ---------OR-----------
 
