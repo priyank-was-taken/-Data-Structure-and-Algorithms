@@ -973,3 +973,15 @@
 #
 #     else:
 #         lst2.append(j)
+
+
+test = "abcd"
+# test2 = list(test)
+# test3 = "".join(test2)
+# print(test3)
+
+
+# string = "Ge;ek * s:fo ! r;Ge * e*k:s !"
+
+test_str = ''.join(letter for letter in test if letter.isalnum())
+print(test_str)
